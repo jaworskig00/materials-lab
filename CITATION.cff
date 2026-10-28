@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "Please cite this software and separately cite the source dataset when using its data."
+type: software
+title: "Materials Lab"
+version: "1.0.0"
+date-released: 2026-10-28
+authors:
+  - family-names: Jaworski
+    given-names: Grzegorz
+repository-code: "https://github.com/jaworskig00/materials-lab"
+url: "https://jaworskig00.github.io/materials-lab/"
+license: MIT
+abstract: "A browser workspace for documented aluminium tensile properties, catalogue-constrained regression, calibrated uncertainty and an illustrative 3D tensile fixture. Data and models have separate CC BY 4.0 terms."
+keywords:
+  - materials science
+  - aluminium
+  - tensile properties
+  - machine learning
+  - uncertainty quantification
+references:
+  - type: data
+    title: "Aluminium alloy dataset for supervised learning"
+    authors:
+      - family-names: Bhat
+        given-names: Ninad
+      - family-names: Barnard
+        given-names: Amanda S.
+      - family-names: Birbilis
+        given-names: Nick
+    year: 2023
+    version: "1"
+    doi: "10.17632/b6br4yk6r3.1"
+    url: "https://data.mendeley.com/datasets/b6br4yk6r3/1"

@@ -43,3 +43,9 @@ Local generated environments, runtime copies, imports, browser traces and scratc
 The subsequent scene update adds jaw closure, fixed lower/moving upper grips, visible gauge separation, an original-outline overlay, three camera presets, phase jumps and variable playback speed. It is identical for every material and does not consume prediction values.
 
 Local lint, TypeScript, 11 unit tests and production build passed. Browser coverage increased to 14 passing tests (seven per browser); the added test checks visibly changed canvas captures, camera presets, outline selection, replay, pause, direct phase selection and live reduced-motion preferences. React Doctor found no issues in the changed scene and playback hook. Desktop and mobile captures report no script errors and a 390px mobile document width. Model files and their calibration are unchanged. GitHub Actions provides the result for the exact updated commit.
+
+## Public release preparation
+
+Application version 1.0.0 retains frozen model 0.1.0 without retraining. The owner authorized public release after README, license and repository metadata review. The root LICENSE now contains standard MIT text; NOTICE.md and the offline CC BY 4.0 text identify separately licensed data/models. Production dependency/font notices accompany the static site. Repository metadata, contribution guidance, security reporting and software/data citations were prepared for publication.
+
+The earlier private-candidate sections are historical validation records. Current visibility, deployment state and exact-commit CI results are reported by GitHub, not inferred from those records.

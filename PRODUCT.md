@@ -27,7 +27,7 @@ Approved dark neutral laboratory, restrained colours, precise units, visible dis
 Bhat, Barnard and Birbilis, Mendeley dataset b6br4yk6r3 version 1, CC BY 4.0. Original CSV retained with publisher SHA256. No independent laboratory validation.
 
 ## Delivery
-All implementation and local tests before first push. Private jaworskig00/materials-lab repository. Pages disabled until explicit user decision. No automatic public release.
+Initial implementation and local tests preceded the first private push. On 2026-10-28 the owner authorized public release and GitHub Pages after documentation, license and repository-metadata review. Future deployments remain manual, from reviewed release tags.
 
 ## Accessibility & Inclusion
 Keyboard controls, visible focus, reduced motion, responsive layout, WebGL fallback, textual data alternatives.

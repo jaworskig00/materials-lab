@@ -4,7 +4,7 @@
 
 The accepted scope is civilian tensile-property research with a catalogue-constrained surrogate and a schematic 3D specimen. The interface is English and code-first, following the approved dark neutral laboratory direction. No material discovery optimizer, ballistic model, cloud inference, user accounts or analytics is included.
 
-All work and local verification precede the first push. The remote must remain private, with Pages disabled, until the owner explicitly approves a public release. No CI workflow changes visibility or publishes on ordinary pushes.
+All work and local verification precede the first push. The initial remote remained private with Pages disabled until the owner authorized public release after documentation and metadata review. No CI workflow changes visibility or publishes on ordinary pushes.
 
 ## Data and validation
 
