@@ -79,6 +79,11 @@
         "name": "control-color",
         "value": "background .15s,color .15s,border-color .15s",
         "purpose": "Button and link color-state transitions; suppressed for reduced motion."
+      },
+      {
+        "name": "tensile-illustration",
+        "value": "12s at 1\u00d7; 0.5\u00d7 / 1\u00d7 / 2\u00d7; updates capped near 30fps",
+        "purpose": "User-started Mount / Pull / Hold sequence; exaggerated, independent of predictions. Pauses when hidden, offscreen or reduced motion is enabled."
       }
     ],
     "breakpoints": [

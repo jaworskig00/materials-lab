@@ -37,3 +37,9 @@ Run `npm run check`, `.venv/bin/python -m pytest -q`, `.venv/bin/python scripts/
 The requested first remote is private `jaworskig00/materials-lab`. GitHub Pages stays disabled. The publication workflow is manual and refuses private repositories. Making the repository public, creating the public v1.0.0 release and enabling Pages require the owner's separate decision.
 
 Local generated environments, runtime copies, imports, browser traces and scratch files are ignored. Only the public source snapshot and authored project assets belong in Git history. No user-imported laboratory records are included.
+
+## 3D illustration refinement
+
+The subsequent scene update adds jaw closure, fixed lower/moving upper grips, visible gauge separation, an original-outline overlay, three camera presets, phase jumps and variable playback speed. It is identical for every material and does not consume prediction values.
+
+Local lint, TypeScript, 11 unit tests and production build passed. Browser coverage increased to 14 passing tests (seven per browser); the added test checks visibly changed canvas captures, camera presets, outline selection, replay, pause, direct phase selection and live reduced-motion preferences. React Doctor found no issues in the changed scene and playback hook. Desktop and mobile captures report no script errors and a 390px mobile document width. Model files and their calibration are unchanged. GitHub Actions provides the result for the exact updated commit.

@@ -10,7 +10,7 @@ A browser research workspace for documented aluminium tensile properties. Three 
 
 - Search 972 audited records and inspect recorded composition and processing state.
 - Run three real ONNX models locally, with 90% prediction intervals and training-support indicators.
-- Orbit a schematic tensile apparatus; play, pause or inspect its illustration stage.
+- Inspect a schematic tensile apparatus through three camera views; play Mount / Pull / Hold, change speed, scrub, and compare with the original outline.
 - Compare up to four specimens, export CSV/JSON, and inspect exact measured/predicted values.
 - Import local laboratory CSVs and compare measured values against the catalogue-constrained predictions. Imported data stays on the device.
 - Inspect held-out metrics, source attribution, exclusions and model limitations.

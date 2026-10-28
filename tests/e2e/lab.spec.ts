@@ -69,3 +69,37 @@ test('mocked worker fixture exercises model-independent UI',async({page})=>{
   },{id:initial.id,values:{yield:123.4,tensile:234.5,elongation:12.3}});
   await page.goto('');await expect(page.getByTestId('prediction-ready')).toBeVisible();await expect(page.locator('.property-value').first()).toContainText('123.4');
 });
+
+
+test('illustration phases, camera views, scrubbing and replay', async ({ page }) => {
+  await page.goto('');
+  await expect(page.getByTestId('prediction-ready')).toBeVisible();
+  const slider = page.getByRole('slider', { name: 'Illustration stage' });
+  const canvas = page.locator('canvas');
+  await expect(canvas).toBeVisible();
+  const mounted = await canvas.screenshot();
+  await page.getByRole('button', { name: '3 Hold', exact: true }).click();
+  await expect(slider).toHaveValue('1');
+  await expect(page.locator('.scene-phase')).toContainText('Compare the extended coupon');
+  const extended = await canvas.screenshot();
+  expect(extended.equals(mounted)).toBe(false);
+  await page.getByRole('button', { name: 'Specimen close-up', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Specimen close-up', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  expect((await canvas.screenshot()).equals(extended)).toBe(false);
+  await page.getByRole('checkbox', { name: 'Original outline' }).uncheck();
+  await expect(page.getByRole('checkbox', { name: 'Original outline' })).not.toBeChecked();
+  await page.getByRole('combobox', { name: 'Playback speed' }).selectOption('2');
+  await page.getByRole('button', { name: 'Play illustration', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Pause illustration', exact: true })).toBeVisible();
+  await expect.poll(async () => Number(await slider.inputValue())).toBeGreaterThan(.02);
+  await page.getByRole('button', { name: 'Pause illustration', exact: true }).click();
+  const paused = await slider.inputValue();
+  await page.waitForTimeout(150);
+  await expect(slider).toHaveValue(paused);
+  await page.getByRole('button', { name: '2 Pull', exact: true }).click();
+  await expect(slider).toHaveValue('0.52');
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await expect(page.getByRole('button', { name: 'Play illustration', exact: true })).toBeDisabled();
+  await page.getByRole('button', { name: '3 Hold', exact: true }).click();
+  await expect(slider).toHaveValue('1');
+});
