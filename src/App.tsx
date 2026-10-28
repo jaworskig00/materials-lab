@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowDownToLine, ArrowRight, ArrowUpRight, Check, ChevronRight, CircleHelp, Database, FileUp, FlaskConical, GitCompareArrows, LoaderCircle, Plus, Search, ShieldCheck, Trash2, X, AlertCircle, RotateCcw } from 'lucide-react';
+import { ArrowDownToLine, ArrowRight, ArrowUpRight, Check, CircleHelp, Database, FileUp, FlaskConical, GitCompareArrows, LoaderCircle, Plus, Search, ShieldCheck, Trash2, X, AlertCircle, RotateCcw } from 'lucide-react';
 import { boot, useLab, type Tab } from './lib/store';
 import { labels, properties, units, type Measurement, type Prediction, type Sample } from './lib/types';
 import { comparisonCsv, download, parseMeasurements } from './lib/csv';
@@ -11,6 +11,8 @@ const pct = (n: number) => `${(n*100).toFixed(1)}%`;
 
 function Catalogue({ sample }: { sample: Sample }) {
   const bundle = useLab(s=>s.bundle)!; const select=useLab(s=>s.select);
+  const listRef=useRef<HTMLUListElement>(null); const selectedRef=useRef<HTMLButtonElement>(null);
+  useEffect(()=>{if(listRef.current&&selectedRef.current)listRef.current.scrollTop=Math.max(0,selectedRef.current.offsetTop-listRef.current.clientHeight/2+selectedRef.current.offsetHeight/2);},[sample.id]);
   const [query,setQuery]=useState(''); const [processing,setProcessing]=useState('all'); const [limit,setLimit]=useState(30);
   const samples=bundle.catalogue.samples;
   const filtered = useMemo(()=>samples.filter(s=>(processing==='all'||s.processing===processing) && `${s.id} ${s.label} ${s.processing}`.toLowerCase().includes(query.toLowerCase())),[samples,query,processing]);
@@ -21,11 +23,11 @@ function Catalogue({ sample }: { sample: Sample }) {
     <label className="field-label" htmlFor="processing">Material state</label>
     <select id="processing" value={processing} onChange={e=>{setProcessing(e.target.value);setLimit(30);}}><option value="all">All documented states</option>{Array.from(new Set(samples.map(s=>s.processing))).sort().map(s=><option key={s}>{s}</option>)}</select>
     <div className="catalogue-count"><span>{filtered.length} matching records</span><span>Source ID</span></div>
-    <div className="catalogue-list" role="list" aria-label="Catalogue records">
-      {filtered.slice(0,limit).map(s=><div role="listitem" key={s.id}><button className={`sample-option ${s.id===sample.id?'selected':''}`} onClick={()=>void select(s.id)} aria-pressed={s.id===sample.id} aria-label={`Select ${s.id}, ${s.label}`}><span className="sample-top"><strong>{s.label}</strong><span className="mono">{s.id}</span></span><span className="sample-state">{s.processing}</span><span className="sample-bottom"><span className={`support-dot ${s.support}`}/>{s.split==='test'?'Held-out test record':s.split==='calibration'?'Calibration record':'Training record'}{s.id===sample.id&&<Check size={13}/>}</span></button></div>)}
-      {!filtered.length&&<div className="empty-small">No matching records. Try a source ID such as AL-0001.</div>}
-      {filtered.length>limit&&<button className="button subtle full small" onClick={()=>setLimit(l=>l+30)}>Show 30 more</button>}
-    </div>
+    <ul ref={listRef} className="catalogue-list" aria-label="Catalogue records">
+      {filtered.slice(0,limit).map(s=><li key={s.id}><button ref={s.id===sample.id?selectedRef:undefined} className={`sample-option ${s.id===sample.id?'selected':''}`} onClick={()=>void select(s.id)} aria-pressed={s.id===sample.id} aria-label={`Select ${s.id}, ${s.label}`}><span className="sample-top"><strong>{s.label}</strong><span className="mono">{s.id}</span></span><span className="sample-state">{s.processing}</span><span className="sample-bottom"><span className={`support-dot ${s.support}`}/>{s.split==='test'?'Held-out test record':s.split==='calibration'?'Calibration record':'Training record'}{s.id===sample.id&&<Check size={13}/>}</span></button></li>)}
+      {!filtered.length&&<li className="empty-small">No matching records. Try a source ID such as AL-0001.</li>}
+      {filtered.length>limit&&<li><button className="button subtle full small" onClick={()=>setLimit(l=>l+30)}>Show 30 more</button></li>}
+    </ul>
     <div className="library-foot"><Database size={15}/><span>Public measurements<br/><a href={bundle.catalogue.source.url} target="_blank" rel="noreferrer">Bhat et al. · 2023 <ArrowUpRight size={11}/></a></span></div>
   </aside>;
 }
@@ -130,8 +132,8 @@ export function App() {
   useEffect(()=>{const listener=()=>{const t=window.location.hash.slice(1); if(tabs.some(v=>v.id===t))useLab.setState({tab:t as Tab});};window.addEventListener('hashchange',listener);return()=>window.removeEventListener('hashchange',listener);},[]);
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
-    <header className="app-header"><a className="brand" href="#laboratory" onClick={()=>setTab('laboratory')}><span className="brand-mark"><FlaskConical size={21} strokeWidth={1.5}/></span><span>Materials<span className="brand-light"> Lab</span></span></a><nav aria-label="Main navigation">{tabs.map(t=><button key={t.id} className={tab===t.id?'active':''} aria-current={tab===t.id?'page':undefined} onClick={()=>setTab(t.id)}>{t.label}{t.id==='compare'&&saved.length>0&&<span className="nav-count">{saved.length}</span>}</button>)}</nav><div className="header-status"><span className="live-dot"/>Local inference <span className="header-version">v{bundle?.manifest.modelVersion??'0.1.0'}</span></div></header>
-    <main id="main"><div className="breadcrumb"><span>Research workspace</span><ChevronRight size={13}/><span>Aluminium</span></div>
+    <header className="app-header"><button className="brand" onClick={()=>setTab('laboratory')}><span className="brand-mark"><FlaskConical size={21} strokeWidth={1.5}/></span><span>Materials<span className="brand-light"> Lab</span></span></button><nav aria-label="Main navigation">{tabs.map(t=><button key={t.id} className={tab===t.id?'active':''} aria-current={tab===t.id?'page':undefined} onClick={()=>setTab(t.id)}>{t.label}{t.id==='compare'&&saved.length>0&&<span className="nav-count">{saved.length}</span>}</button>)}</nav><div className="header-status"><span className="live-dot"/>Local inference <span className="header-version">v{bundle?.manifest.modelVersion??'0.1.0'}</span></div></header>
+    <main id="main" tabIndex={-1}>
       {storageError&&<p className="error-box" role="alert">{storageError}</p>}
       {bootError?<div className="empty-state" role="alert"><AlertCircle size={32}/><h1>Research assets could not load.</h1><p>{bootError}</p><button className="button primary" onClick={()=>void boot()}>Retry loading</button></div>:!bundle?<div className="loading-page" role="status"><LoaderCircle className="spin"/>Loading verified research assets…</div>:tab==='laboratory'?<Laboratory/>:tab==='compare'?<Compare/>:tab==='measurements'?<Measurements/>:<Evidence/>}
     </main>

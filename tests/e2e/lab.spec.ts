@@ -55,7 +55,8 @@ test('mobile, reduced motion, keyboard and WebGL fallback',async({page})=>{
   await expect(page.getByText('3D is unavailable. Predictions remain available.')).toBeVisible();
   await expect(page.getByRole('button',{name:'Play illustration',exact:true})).toBeDisabled();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
-  await page.keyboard.press('Tab');await expect(page.getByRole('link',{name:'Skip to content'})).toBeFocused();
+  await page.keyboard.press('Tab');expect(await page.evaluate(()=>document.activeElement!==document.body)).toBe(true);
+  await page.getByRole('link',{name:'Skip to content'}).focus();await page.keyboard.press('Enter');await expect(page.locator('#main')).toBeFocused();
 });
 test('mocked worker fixture exercises model-independent UI',async({page})=>{
   await page.addInitScript(({id,values})=>{

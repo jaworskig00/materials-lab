@@ -4,8 +4,9 @@ const fields = { yield: 'yield_mpa', tensile: 'tensile_mpa', elongation: 'elonga
 export function parseMeasurements(text: string, samples: Sample[]): Measurement[] {
   const rows = csvParse(text.replace(/^\uFEFF/, ''));
   if (!rows.length || rows.length > 10000) throw new Error('Provide between 1 and 10,000 measurement rows.');
-  for (const c of ['sample_id', 'catalogue_id']) if (!rows.columns.includes(c)) throw new Error(`Missing required column: ${c}. Download the CSV template.`);
-  if (!Object.values(fields).some(c => rows.columns.includes(c))) throw new Error('Include at least one measurement column: yield_mpa, tensile_mpa or elongation_percent.');
+  const columns = new Set(rows.columns);
+  for (const c of ['sample_id', 'catalogue_id']) if (!columns.has(c)) throw new Error(`Missing required column: ${c}. Download the CSV template.`);
+  if (!Object.values(fields).some(c => columns.has(c))) throw new Error('Include at least one measurement column: yield_mpa, tensile_mpa or elongation_percent.');
   const catalogue = new Set(samples.map(s => s.id));
   const seen = new Set<string>();
   return rows.map((row, index) => {

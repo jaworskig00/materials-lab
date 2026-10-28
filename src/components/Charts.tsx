@@ -1,4 +1,5 @@
 import { scaleLinear } from 'd3';
+import { useEffect, useRef, useState } from 'react';
 import { labels, properties, units, type Property, type SavedSample, type Sample, type Prediction } from '../lib/types';
 
 const color = ['#d8bc87', '#b4c9b4', '#9db8d3', '#c7abd2'];
@@ -17,11 +18,20 @@ export function PropertyPlot({ sample, prediction, property }: { sample: Sample;
   </svg>;
 }
 export function ComparisonPlot({ saved, property }: { saved: SavedSample[]; property: Property }) {
+  const svgRef = useRef<SVGSVGElement>(null);
+  const [width, setWidth] = useState(360);
+  useEffect(() => {
+    const element = svgRef.current;
+    if (!element) return;
+    const observer = new ResizeObserver(([entry]) => setWidth(entry.contentRect.width));
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
   const max = Math.max(...saved.map(s => Math.max(s.prediction.estimates[property].upper, s.sample.measured[property] ?? 0))) * 1.06;
-  const scale = scaleLinear().domain([0,max]).nice().range([95,650]);
+  const scale = scaleLinear().domain([0,max]).nice().range([83,Math.max(110, width - 24)]);
   const height = 70 + saved.length*55;
-  return <svg className="comparison-plot" viewBox={`0 0 700 ${height}`} role="img" aria-label={`${labels[property]} comparison with 90 percent prediction intervals`}>
-    {scale.ticks(5).map(v=><g key={v}><line x1={scale(v)} x2={scale(v)} y1="15" y2={height-32} stroke="#344139"/><text x={scale(v)} y={height-12} textAnchor="middle">{v}</text></g>)}
+  return <svg ref={svgRef} className="comparison-plot" height={height} role="img" aria-label={`${labels[property]} comparison with 90 percent prediction intervals`}>
+    {scale.ticks(width < 400 ? 3 : 5).map(v=><g key={v}><line x1={scale(v)} x2={scale(v)} y1="15" y2={height-32} stroke="#344139"/><text x={scale(v)} y={height-12} textAnchor="middle">{v}</text></g>)}
     {saved.map(({sample,prediction},i)=>{
       const e=prediction.estimates[property]; const y=38+i*55;
       return <g key={sample.id}><text x="5" y={y+5} fill={color[i]}>{sample.id}</text><line x1={scale(e.lower)} x2={scale(e.upper)} y1={y} y2={y} stroke={color[i]} strokeWidth="3"/>

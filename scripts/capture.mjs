@@ -1,0 +1,36 @@
+import { chromium } from '@playwright/test';
+import { mkdir } from 'node:fs/promises';
+import catalogue from '../public/models/catalogue.json' with { type: 'json' };
+await mkdir('.impeccable/review', { recursive: true });
+const browser = await chromium.launch({ headless: true });
+const page = await browser.newPage({ viewport: { width: 1440, height: 1100 }, reducedMotion: 'reduce' });
+const errors = [];
+page.on('pageerror', e => errors.push(e.message));
+await page.goto('http://127.0.0.1:4173/materials-lab/');
+await page.getByTestId('prediction-ready').waitFor();
+await page.locator('canvas').waitFor();
+await page.evaluate(() => document.fonts.ready);
+await page.screenshot({ path: '.impeccable/review/desktop.png', fullPage: true });
+await page.getByRole('button', { name: 'Data & model' }).click();
+await page.screenshot({ path: '.impeccable/review/evidence.png', fullPage: true });
+await page.getByRole('button', { name: 'Laboratory', exact: true }).click();
+for (const sample of catalogue.samples.filter(s => s.split === 'test' && s.support === 'supported').slice(0, 4)) {
+  await page.getByRole('textbox', { name: 'Search materials' }).fill(sample.id);
+  await page.getByRole('button', { name: `Select ${sample.id}, ${sample.label}`, exact: true }).click();
+  await page.getByTestId('prediction-ready').waitFor();
+  await page.getByRole('button', { name: 'Add to comparison' }).click();
+}
+await page.getByRole('button', { name: /^Compare/ }).click();
+await page.screenshot({ path: '.impeccable/review/compare.png', fullPage: true });
+console.log('comparison labels', await page.locator('.comparison-plot text').first().evaluate(e => getComputedStyle(e).fontSize));
+await page.setViewportSize({ width: 390, height: 844 });
+await page.screenshot({ path: '.impeccable/review/compare-mobile.png', fullPage: true });
+await page.setViewportSize({ width: 1440, height: 1100 });
+const mobile = await browser.newPage({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
+await mobile.goto('http://127.0.0.1:4173/materials-lab/');
+await mobile.getByTestId('prediction-ready').waitFor();
+await mobile.locator('canvas').waitFor();
+await mobile.evaluate(() => document.fonts.ready);
+await mobile.screenshot({ path: '.impeccable/review/mobile.png', fullPage: true });
+console.log(JSON.stringify({ errors, desktop: await page.evaluate(() => document.documentElement.scrollWidth), mobile: await mobile.evaluate(() => document.documentElement.scrollWidth) }));
+await browser.close();
