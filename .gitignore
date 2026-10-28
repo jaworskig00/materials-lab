@@ -1,0 +1,14 @@
+node_modules/
+.venv/
+dist/
+public/runtime/
+__pycache__/
+.pytest_cache/
+*.tsbuildinfo
+test-results/
+playwright-report/
+.DS_Store
+.env*
+!.env.example
+.impeccable/review/
+work/

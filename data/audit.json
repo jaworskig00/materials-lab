@@ -1,0 +1,758 @@
+{
+  "sourceRows": 1154,
+  "acceptedRows": 972,
+  "compositionGroups": 398,
+  "sourceSha256": "a3dd4f5091e485cf4db90308babcad38831174ddafbb6ae03df4ca3d4a647906",
+  "compositionUnit": "mass fraction; displayed as mass %",
+  "excluded": [
+    {
+      "sourceRow": 78,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 102,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 104,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 106,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 213,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 217,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 221,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 241,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 248,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 264,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 268,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 270,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 274,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 275,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 277,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 279,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 284,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 286,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 288,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 297,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 330,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 361,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 368,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 378,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 392,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 399,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 454,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 456,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 486,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 487,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 490,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 492,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 506,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 507,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 510,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 511,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 515,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 516,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 517,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 525,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 526,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 528,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 529,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 531,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 558,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 569,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 576,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 580,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 582,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 586,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 588,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 590,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 592,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 595,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 596,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 598,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 603,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 604,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 605,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 607,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 608,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 609,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 610,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 611,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 612,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 613,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 614,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 615,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 617,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 619,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 636,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 658,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 668,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 688,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 690,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 694,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 699,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 702,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 713,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 717,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 720,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 726,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 730,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 754,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 758,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 760,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 770,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 773,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 778,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 781,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 785,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 787,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 790,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 802,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 805,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 813,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 816,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 818,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 820,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 822,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 824,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 828,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 833,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 834,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 839,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 841,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 844,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 846,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 848,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 850,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 855,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 860,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 877,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 889,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 898,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 916,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 917,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 918,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 919,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 921,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 922,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 923,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 925,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 926,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 928,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 930,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 934,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 935,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 939,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 940,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 941,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 942,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 943,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 945,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 946,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 947,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 948,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 953,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 955,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 957,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 959,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 961,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 963,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 965,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 967,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 980,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 981,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 983,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 988,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 993,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 996,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1001,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1002,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1010,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1033,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1035,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1038,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1042,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1045,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1048,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1057,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1061,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1063,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1067,
+      "reason": "Measured yield exceeds tensile strength"
+    },
+    {
+      "sourceRow": 1074,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1076,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1078,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1080,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1093,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1094,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1102,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1103,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1105,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1115,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1116,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1120,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1121,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1123,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1124,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1125,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1130,
+      "reason": "Exact duplicate record"
+    },
+    {
+      "sourceRow": 1140,
+      "reason": "Exact duplicate record"
+    }
+  ],
+  "missingTargets": {
+    "yield": 98,
+    "tensile": 33,
+    "elongation": 97
+  },
+  "splits": {
+    "train": {
+      "rows": 639,
+      "groups": 278
+    },
+    "calibration": {
+      "rows": 180,
+      "groups": 60
+    },
+    "test": {
+      "rows": 153,
+      "groups": 60
+    }
+  },
+  "grouping": "SHA256 of composition mass fractions rounded to eight decimals; all processing states kept together.",
+  "testPolicy": "Fixed seeds 42/43; test data never used for tuning or calibration."
+}

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "0.1.0",
+  "ready": true,
+  "featureCount": 35,
+  "features": [
+    "Ag",
+    "Al",
+    "B",
+    "Be",
+    "Bi",
+    "Cd",
+    "Co",
+    "Cr",
+    "Cu",
+    "Er",
+    "Eu",
+    "Fe",
+    "Ga",
+    "Li",
+    "Mg",
+    "Mn",
+    "Ni",
+    "Pb",
+    "Sc",
+    "Si",
+    "Sn",
+    "Ti",
+    "V",
+    "Zn",
+    "Zr",
+    "processing:Artificial aged",
+    "processing:Naturally aged",
+    "processing:No Processing",
+    "processing:Solutionised",
+    "processing:Solutionised  + Artificially peak aged",
+    "processing:Solutionised + Artificially over aged",
+    "processing:Solutionised + Cold Worked + Naturally aged",
+    "processing:Solutionised + Naturally aged",
+    "processing:Strain Harderned (Hard)",
+    "processing:Strain hardened"
+  ],
+  "compositionUnit": "mass fraction",
+  "nominalCoverage": 0.9,
+  "calibrationMethod": "Split conformal; maximum absolute residual per composition group; finite-sample corrected quantile.",
+  "targets": {
+    "yield": {
+      "file": "yield.onnx",
+      "sha256": "4d83f568af172f0da14667a2f1978806c8f7f9adf8fff25a46b9e031eb1f0f34",
+      "bytes": 1659526,
+      "input": "X",
+      "output": "variable",
+      "radius": 110.60731288419129,
+      "unit": "MPa"
+    },
+    "tensile": {
+      "file": "tensile.onnx",
+      "sha256": "6bfe1af8596b2a57ea1d53ae17adba1c81f905c1196567bf60ce2bcad363112d",
+      "bytes": 1740833,
+      "input": "X",
+      "output": "variable",
+      "radius": 88.99922644128787,
+      "unit": "MPa"
+    },
+    "elongation": {
+      "file": "elongation.onnx",
+      "sha256": "a13eb9d38684061b69ed449d5cb27f92f599c373b099bd2974dbcabfd8db7cb1",
+      "bytes": 1127650,
+      "input": "X",
+      "output": "variable",
+      "radius": 11.422043153617018,
+      "unit": "%"
+    }
+  },
+  "assets": {
+    "catalogue.json": "3e3d4c40b2bf35ce29c6052df7dd8d752d23153044d70f75d73c494c964a7b8e",
+    "metrics.json": "26f0b58549f97e0a8ba35cb1ac615b40747e95aead1ef9ff3b1ff2bce649e53f"
+  },
+  "sourceSha256": "a3dd4f5091e485cf4db90308babcad38831174ddafbb6ae03df4ca3d4a647906",
+  "oodThreshold": 0.64338068917162
+}
