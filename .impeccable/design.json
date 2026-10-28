@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-28T16:24:42.676081+00:00",
+  "title": "Design System: Materials Lab",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Charcoal Green"
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel Green"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Instrument Rule"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Sage"
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Estimate Gold"
+      },
+      "green": {
+        "role": "primary",
+        "displayName": "Instrument Sage"
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Pale Text"
+      },
+      "control-ground": {
+        "role": "neutral",
+        "displayName": "Control Green"
+      },
+      "scene-ground": {
+        "role": "neutral",
+        "displayName": "Scene Green"
+      },
+      "comparison-sage": {
+        "role": "secondary",
+        "displayName": "Comparison Sage"
+      },
+      "comparison-blue": {
+        "role": "secondary",
+        "displayName": "Comparison Blue"
+      },
+      "comparison-lilac": {
+        "role": "secondary",
+        "displayName": "Comparison Lilac"
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Page headline",
+        "purpose": "Fluid page headings."
+      },
+      "body": {
+        "displayName": "Reading prose",
+        "purpose": "Evidence and import explanations."
+      },
+      "chart-label": {
+        "displayName": "Comparison label",
+        "purpose": "Fixed screen-pixel axis and record labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "notification",
+        "value": "0 12px 36px #0006",
+        "purpose": "Observed toast-only elevation; not a general card shadow."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-color",
+        "value": "background .15s,color .15s,border-color .15s",
+        "purpose": "Button and link color-state transitions; suppressed for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1500px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1150px"
+      },
+      {
+        "name": "mobile",
+        "value": "720px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "A primary action from the laboratory controls.",
+      "html": "<button class=\"ds-button-primary\">Add to comparison</button>",
+      "css": ".ds-button-primary{font-family:'Manrope Variable',sans-serif;display:inline-flex;gap:9px;align-items:center;justify-content:center;min-height:40px;padding:10px 15px;font-size:12px;font-weight:600;line-height:1.4;border:1px solid transparent;border-radius:5px;cursor:pointer;transition:background .15s,color .15s,border-color .15s;background:var(--green,#c3d7ba);color:#19251b;border-color:var(--green,#c3d7ba);}.ds-button-primary:hover:not(:disabled){background:#deead8;border-color:#deead8;}.ds-button-primary:focus-visible{outline:2px solid var(--accent,#d8bc87);outline-offset:4px;}.ds-button-primary:disabled{opacity:.45;cursor:not-allowed;}@media(prefers-reduced-motion:reduce){.ds-button-primary{transition:none;}}"
+    },
+    {
+      "name": "Subtle button",
+      "kind": "button",
+      "refersTo": "button-subtle",
+      "description": "A subtle action from the laboratory controls.",
+      "html": "<button class=\"ds-button-subtle\">Add to comparison</button>",
+      "css": ".ds-button-subtle{font-family:'Manrope Variable',sans-serif;display:inline-flex;gap:9px;align-items:center;justify-content:center;min-height:40px;padding:10px 15px;font-size:12px;font-weight:600;line-height:1.4;border:1px solid transparent;border-radius:5px;cursor:pointer;transition:background .15s,color .15s,border-color .15s;background:#212c24;color:#dce6d9;border-color:#415043;}.ds-button-subtle:hover:not(:disabled){background:#2c3a2f;border-color:#61745f;}.ds-button-subtle:focus-visible{outline:2px solid var(--accent,#d8bc87);outline-offset:4px;}.ds-button-subtle:disabled{opacity:.45;cursor:not-allowed;}@media(prefers-reduced-motion:reduce){.ds-button-subtle{transition:none;}}"
+    },
+    {
+      "name": "Text button",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "An inline explanatory action.",
+      "html": "<button class=\"ds-text-button\">Read model limitations</button>",
+      "css": ".ds-text-button{font-family:'Manrope Variable',sans-serif;background:none;border:none;padding:0;display:inline-flex;gap:8px;align-items:center;color:#c9d7c6;font-size:11px;cursor:pointer;transition:color .15s}.ds-text-button:hover{color:var(--accent,#d8bc87)}.ds-text-button:focus-visible{outline:2px solid var(--accent,#d8bc87);outline-offset:4px;}@media(prefers-reduced-motion:reduce){.ds-text-button{transition:none}}"
+    },
+    {
+      "name": "Search field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "A catalogue search control.",
+      "html": "<label class=\"ds-search\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><input aria-label=\"Search records\" placeholder=\"Find a record or composition\"/></label>",
+      "css": ".ds-search{display:flex;align-items:center;gap:8px;background:#141c17;border:1px solid #425044;border-radius:4px;padding:0 9px;color:#97ab9b}.ds-search input{font-family:'Manrope Variable',sans-serif;width:100%;min-width:0;background:none;border:0;color:#e1eadf;height:35px;font-size:11px;outline:none}.ds-search input::placeholder{color:#9cae9e}.ds-search:focus-within{outline:2px solid var(--accent,#d8bc87);outline-offset:2px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "navigation-active",
+      "description": "Header destinations with visible active state.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Example navigation\"><button aria-current=\"page\">Laboratory</button><button>Compare</button><button>Measurements</button></nav>",
+      "css": ".ds-nav{display:flex;gap:29px}.ds-nav button{font-family:'Manrope Variable',sans-serif;background:transparent;border:0;border-bottom:2px solid transparent;padding:12px 0;color:#a9b7ac;font-size:13px;cursor:pointer;transition:color .15s,border-color .15s}.ds-nav button:hover{color:#edf4eb}.ds-nav button[aria-current]{color:var(--accent,#d8bc87);border-color:var(--accent,#d8bc87)}.ds-nav button:focus-visible{outline:2px solid var(--accent,#d8bc87);outline-offset:4px;}@media(prefers-reduced-motion:reduce){.ds-nav button{transition:none}}"
+    },
+    {
+      "name": "Status tag",
+      "kind": "chip",
+      "refersTo": "status-tag",
+      "description": "Non-interactive dataset membership label.",
+      "html": "<span class=\"ds-tag\">Held-out test</span>",
+      "css": ".ds-tag{font-family:'Manrope Variable',sans-serif;display:inline-flex;gap:7px;align-items:center;white-space:nowrap;padding:5px 8px;border:1px solid #4d604c;border-radius:4px;color:#c0d2b9;background:#253225;font-size:10px;line-height:1.4}"
+    },
+    {
+      "name": "Chart container",
+      "kind": "card",
+      "refersTo": "chart-container",
+      "description": "A quiet bordered plotting surface.",
+      "html": "<section class=\"ds-chart\"><h3>Yield strength <span>MPa</span></h3><svg role=\"img\" aria-label=\"Example interval and measured point\" width=\"260\" height=\"80\" viewBox=\"0 0 260 80\"><path d=\"M20 40H240\" stroke=\"#344139\"/><path d=\"M80 34V46M80 40H200M200 34V46\" stroke=\"#d8bc87\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"40\" r=\"6\" fill=\"#d8bc87\"/><path d=\"M130 16l4 5-4 5-4-5Z\" fill=\"#e7eee5\"/></svg></section>",
+      "css": ".ds-chart{font-family:'Manrope Variable',sans-serif;min-width:0;border:1px solid var(--line,#344139);border-radius:5px;padding:20px 15px;background:var(--panel,#19211c);color:#e5ebe4}.ds-chart h3{margin:0;font-size:14px;font-weight:600;letter-spacing:-.025em}.ds-chart h3 span{font-size:11px;margin-left:8px;font-weight:400;color:var(--muted,#a7b4a9)}.ds-chart svg{display:block;max-width:100%;margin-top:20px}"
+    },
+    {
+      "name": "Catalogue record",
+      "kind": "custom",
+      "refersTo": "catalogue-record",
+      "description": "A selected record with identity and processing text.",
+      "html": "<button class=\"ds-record\" aria-pressed=\"true\"><span class=\"ds-record-top\"><strong>Al\u2013Mg\u2013Sc</strong><span>AL-0008</span></span><span class=\"ds-record-state\">Solutionised + peak aged</span><span class=\"ds-record-bottom\">Held-out test record</span></button>",
+      "css": ".ds-record{font-family:'Manrope Variable',sans-serif;display:block;text-align:left;width:100%;padding:13px 9px;margin:3px 0;background:transparent;border:1px solid transparent;border-bottom-color:#2c382f;border-radius:4px;color:#e5ebe4;cursor:pointer;transition:background .15s,border-color .15s}.ds-record:hover{background:#26322a}.ds-record[aria-pressed=true]{background:#2b382c;border-color:#596e50}.ds-record:focus-visible{outline:2px solid var(--accent,#d8bc87);outline-offset:4px;}.ds-record-top{display:flex;justify-content:space-between;gap:4px;align-items:center}.ds-record-top strong{font-size:13px;font-weight:550;letter-spacing:-.02em}.ds-record-top>span{font-family:var(--mono,\"IBM Plex Mono\",monospace);font-size:11px;color:#acbdac}.ds-record-state{display:block;font-size:11px;color:#b1beb2;margin-top:5px;line-height:1.5}.ds-record-bottom{display:block;font-size:11px;color:#a7baa8;margin-top:10px}@media(prefers-reduced-motion:reduce){.ds-record{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Laboratory Instrument",
+    "overview": "The laboratory instrument is quiet, dense and explicit. Charcoal-green grounds, fine dividing rules and restrained sage controls keep attention on the specimen and its evidence. Gold marks estimates; measured values remain separately named and shaped.\n\nManrope carries the interface and large estimates; IBM Plex Mono carries identifiers, interval bounds, composition quantities and tabular measurements. Authored tensile-fixture geometry supplies material character without claiming to simulate deformation. The interface is flat around this dimensional scene.",
+    "keyCharacteristics": [
+      "Charcoal-green surfaces and fine structural rules.",
+      "Gold estimates, pale measured diamonds and explicit units.",
+      "Compact controls with visible keyboard focus.",
+      "Authored schematic geometry with optional motion and a fallback."
+    ],
+    "rules": [
+      {
+        "name": "The Evidence Pair Rule",
+        "body": "Show estimates and recorded measurements as separately named marks: circles and intervals for predictions, diamonds for measurements. Keep units and uncertainty beside the values.",
+        "section": "colors"
+      },
+      {
+        "name": "The Screen-Pixel Label Rule",
+        "body": "Comparison labels stay at 13px as the chart resizes; change the axis range and tick count rather than scaling the text.",
+        "section": "typography"
+      },
+      {
+        "name": "The Instrument Surface Rule",
+        "body": "Use tonal grounds and fine rules for ordinary interface hierarchy. Dimensional lighting belongs to the schematic specimen; transient notifications may float above the workspace.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve visible units, interval bounds, record identity and measured/predicted labels.",
+      "Do use monospaced identifiers and measured quantities, with tabular numerals for large estimates.",
+      "Do retain focus outlines, textual chart alternatives, reduced-motion controls and the WebGL fallback.",
+      "Do stack the laboratory tasks on narrow screens and let wide data tables scroll inside their containers."
+    ],
+    "donts": [
+      "Don't present the schematic scene as a deformation, fracture or finite-element simulation.",
+      "Don't replace uncertainty or data-support language with a decorative confidence badge.",
+      "Don't shrink comparison-chart labels to fit additional records.",
+      "Don't introduce a marketing hero or decorative card grid into this instrument workspace."
+    ]
+  }
+}
